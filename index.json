@@ -1,0 +1,266 @@
+{
+  "schema": "pipeag.firmware-index/1",
+  "mirror_repo": "PiMios/pipeag-public-fw-release",
+  "note": "One-way, CI-generated mirror of the PipeAg scale-sensor firmware releases. Every version and address range listed here was read out of the image bytes, never from a filename. scale_model is a stated fact from the release process - null means nobody stated it, which is not the same as a default.",
+  "releases": [
+    {
+      "tag": "v1.0.24",
+      "published_at": "2026-08-25T19:18:27Z",
+      "latest": true,
+      "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/manifest.json",
+      "assets": [
+        {
+          "name": "bootloader-second-stage.s37",
+          "size": 26519,
+          "sha256": "82fff70b03a8a7a10d15b4ab7fa387709c8061438a2da8db59cf0b6deedfccca",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/bootloader-second-stage.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "bootloader",
+          "embedded_version": null,
+          "version_verdict": "UNVERIFIED",
+          "spans": [
+            "0x0000-0x2664"
+          ],
+          "programs_from": "0x0000",
+          "device_name_marker": false,
+          "srec_start_address": "0x0139",
+          "status": "Gecko Bootloader with internal storage; flash before the application on a blank module. Carries no application revision string - identify it by sha256.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "firmware_indicator_config_lookup.xlsx",
+          "size": 13292,
+          "sha256": "286b7139019e770097a5b77b45a81a3e7ffbd7a17767b8276a33404f67fc2f83",
+          "kind": "document",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/firmware_indicator_config_lookup.xlsx",
+          "status": "no entry in source/firmware_profiles.json for sha256 286b7139019e7700..."
+        },
+        {
+          "name": "frm19_t2.gbl",
+          "size": 194308,
+          "sha256": "54b261403e2c7f1da9dcd7dbd958f7417b22a27c998acdcf6dd8c55c195a1ca5",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm19_t2.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.19",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x336B8"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x714C3940",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "field-proven, most widely deployed",
+          "scale_model": 2,
+          "indicator": "Morrison-style CR/LF stream",
+          "serial": "9600-8-N-1",
+          "stream": "CR LF framing, 8-byte frame, weight = 6 ASCII digits",
+          "caution": null,
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm20_t1.gbl",
+          "size": 196588,
+          "sha256": "f5f89ceba3d9b41cfd85a45a4d8858f7d38beec0b8e76114b09abdc54c463120",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm20_t1.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.20",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x3AAC78A3",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 1,
+          "indicator": "Literal 'Net' followed by 5 ASCII digits",
+          "serial": "9600-8-N-1",
+          "stream": "Literal 'Net' prefix, weight = 5 ASCII digits",
+          "caution": null,
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm21_t3.gbl",
+          "size": 196588,
+          "sha256": "65c6968ce3537d84c20852b61ead1faf6c9ebbda74d006618fb57ed547a670d4",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm21_t3.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.21",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0xB734A711",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 3,
+          "indicator": "CR/LF 6-byte frame",
+          "serial": "9600-8-N-1",
+          "stream": "CR LF framing, 6-byte frame, weight = 5 ASCII digits",
+          "caution": "Fixed 5-digit window: right-justified indicators lose leading digits. Superseded by profile 6.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm22_t4.gbl",
+          "size": 196588,
+          "sha256": "1847d0068592b128c448d333732d799cb787c8d44489d0cb43c93078f7fdbcaa",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm22_t4.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.22",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x7DBF50F1",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 4,
+          "indicator": "'G' (gross) tagged record",
+          "serial": "9600-7-E-1",
+          "stream": "CR LF framing, 'G' record, weight = 5 ASCII digits",
+          "caution": "Seven data bits, even parity - not the 8-N-1 every other profile uses.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm23_t5.gbl",
+          "size": 196812,
+          "sha256": "60e123f6aa7d69ea8d5322cc4fab5f4be157a1ed7b52ad4ccf86ac98be66b0ae",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm23_t5.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.23",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x34080"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x9A2D8FB3",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "Rice Lake 720i only",
+          "scale_model": 5,
+          "indicator": "Rice Lake 720i continuous",
+          "serial": "9600-8-N-1",
+          "stream": "Restores the trailing zero the 720i omits from its stream",
+          "caution": "Rice Lake 720i ONLY. On any other indicator this over-reports by 10x.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm24_t6.gbl",
+          "size": 195680,
+          "sha256": "c5f95d927ecbdf44dcf479ca0a3720e05ed570da199d7ba70eab804a360f0d20",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm24_t6.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.24",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33C14"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0xFD9F8683",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "current",
+          "scale_model": 6,
+          "indicator": "Generic CR/LF record (use when the indicator model is unknown)",
+          "serial": "9600-8-N-1",
+          "stream": "No fixed digit window: the weight is the longest ASCII digit run inside the record, right-justified into the 6-character broadcast field",
+          "caution": "Reports the digits actually sent, so on a Rice Lake 720i it under-reports by 10x - use profile 5 there.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm24_t6.s37",
+          "size": 562418,
+          "sha256": "5f2f9e73b6b1f62dfb450743032112084d6578533bd6e35b48a3dd7a0ef0367e",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm24_t6.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "application",
+          "embedded_version": "1.0.24",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33C14"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "srec_start_address": "0x516D",
+          "status": "current; brings a blank unit up over SWD",
+          "scale_model": 6,
+          "indicator": "Generic CR/LF record (use when the indicator model is unknown)",
+          "serial": "9600-8-N-1",
+          "stream": "No fixed digit window: the weight is the longest ASCII digit run inside the record, right-justified into the 6-character broadcast field",
+          "caution": "Reports the digits actually sent, so on a Rice Lake 720i it under-reports by 10x - use profile 5 there.",
+          "profile_source": "stated in firmware_profiles.json"
+        }
+      ]
+    }
+  ]
+}
