@@ -4,9 +4,237 @@
   "note": "One-way, CI-generated mirror of the PipeAg scale-sensor firmware releases. Every version and address range listed here was read out of the image bytes, never from a filename. scale_model is a stated fact from the release process - null means nobody stated it, which is not the same as a default.",
   "releases": [
     {
+      "tag": "v1.0.26",
+      "published_at": "2026-08-26T20:23:56Z",
+      "latest": true,
+      "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/manifest.json",
+      "assets": [
+        {
+          "name": "bootloader-second-stage.s37",
+          "size": 26519,
+          "sha256": "82fff70b03a8a7a10d15b4ab7fa387709c8061438a2da8db59cf0b6deedfccca",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/bootloader-second-stage.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "bootloader",
+          "embedded_version": null,
+          "version_verdict": "UNVERIFIED",
+          "spans": [
+            "0x0000-0x2664"
+          ],
+          "programs_from": "0x0000",
+          "device_name_marker": false,
+          "srec_start_address": "0x0139",
+          "status": "Gecko Bootloader with internal storage; flash before the application on a blank module. Carries no application revision string - identify it by sha256.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "firmware_indicator_config_lookup.xlsx",
+          "size": 13676,
+          "sha256": "dcbfc821488df162333b0e325aa3e92f0ee47137ba80b6dbbc5e76a5d4f66c88",
+          "kind": "document",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/firmware_indicator_config_lookup.xlsx",
+          "status": "no entry in source/firmware_profiles.json for sha256 dcbfc821488df162..."
+        },
+        {
+          "name": "frm20_t1.gbl",
+          "size": 196588,
+          "sha256": "f5f89ceba3d9b41cfd85a45a4d8858f7d38beec0b8e76114b09abdc54c463120",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm20_t1.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.20",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x3AAC78A3",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 1,
+          "indicator": "Literal 'Net' followed by 5 ASCII digits",
+          "serial": "9600-8-N-1",
+          "stream": "Literal 'Net' prefix, weight = 5 ASCII digits",
+          "caution": null,
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm21_t3.gbl",
+          "size": 196588,
+          "sha256": "65c6968ce3537d84c20852b61ead1faf6c9ebbda74d006618fb57ed547a670d4",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm21_t3.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.21",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0xB734A711",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 3,
+          "indicator": "CR/LF 6-byte frame",
+          "serial": "9600-8-N-1",
+          "stream": "CR LF framing, 6-byte frame, weight = 5 ASCII digits",
+          "caution": "Fixed 5-digit window: right-justified indicators lose leading digits. Superseded by profile 6.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm22_t4.gbl",
+          "size": 196588,
+          "sha256": "1847d0068592b128c448d333732d799cb787c8d44489d0cb43c93078f7fdbcaa",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm22_t4.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.22",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33FA0"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x7DBF50F1",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "bench-test before rollout",
+          "scale_model": 4,
+          "indicator": "'G' (gross) tagged record",
+          "serial": "9600-7-E-1",
+          "stream": "CR LF framing, 'G' record, weight = 5 ASCII digits",
+          "caution": "Seven data bits, even parity - not the 8-N-1 every other profile uses.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm23_t5.gbl",
+          "size": 196812,
+          "sha256": "60e123f6aa7d69ea8d5322cc4fab5f4be157a1ed7b52ad4ccf86ac98be66b0ae",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm23_t5.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.23",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x34080"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x9A2D8FB3",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "Rice Lake 720i only",
+          "scale_model": 5,
+          "indicator": "Rice Lake 720i continuous",
+          "serial": "9600-8-N-1",
+          "stream": "Restores the trailing zero the 720i omits from its stream",
+          "caution": "The premise this profile encodes (a 720i that omits its trailing weight zero) is contradicted by every capture on file: on the captured Rice Lake streams it over-reports by 10x. Deploy only on a binary wire capture proving the truncated stream exists. See RELEASE_NOTES_v1.0.26.md.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm26_t6.gbl",
+          "size": 195680,
+          "sha256": "b4165f8f7efb621bcf3c216522231dc927790568ea7c3e2c911c25e3eec985c8",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm26_t6.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "1.0.26",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33C14"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "gbl_crc32": "0x6503DFCC",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "current",
+          "scale_model": 6,
+          "indicator": "Generic CR/LF record (use when the indicator model is unknown)",
+          "serial": "9600-8-N-1",
+          "stream": "No fixed digit window: the weight is the longest ASCII digit run inside the record, right-justified into the 6-character broadcast field. From 1.0.26 the reassembler consumes a leading STX (0x02) as framing - Rice Lake indicators send every continuous record as <STX>...<CR><LF>. 1.0.24 rejects STX-framed records.",
+          "caution": "Earlier docs said profile 6 under-reports 10x on a Rice Lake 720i (the trailing-zero claim). Every Rice Lake capture on file - 13,615 records across six logs - carries the full displayed weight; the uniform trailing zeros are the 20 lb division. Verify at install: the broadcast must equal the indicator display.",
+          "profile_source": "stated in firmware_profiles.json"
+        },
+        {
+          "name": "frm26_t6.s37",
+          "size": 562418,
+          "sha256": "8d60bfe52d6d101f6b3aa2d8d1ce0905eb4498a18fe1c7c34b562ff5084360d9",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/frm26_t6.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "application",
+          "embedded_version": "1.0.26",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33C14"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": true,
+          "srec_start_address": "0x516D",
+          "status": "current; brings a blank unit up over SWD",
+          "scale_model": 6,
+          "indicator": "Generic CR/LF record (use when the indicator model is unknown)",
+          "serial": "9600-8-N-1",
+          "stream": "No fixed digit window: the weight is the longest ASCII digit run inside the record, right-justified into the 6-character broadcast field. From 1.0.26 the reassembler consumes a leading STX (0x02) as framing - Rice Lake indicators send every continuous record as <STX>...<CR><LF>. 1.0.24 rejects STX-framed records.",
+          "caution": "Earlier docs said profile 6 under-reports 10x on a Rice Lake 720i (the trailing-zero claim). Every Rice Lake capture on file - 13,615 records across six logs - carries the full displayed weight; the uniform trailing zeros are the 20 lb division. Verify at install: the broadcast must equal the indicator display.",
+          "profile_source": "stated in firmware_profiles.json"
+        }
+      ]
+    },
+    {
       "tag": "v1.0.24",
       "published_at": "2026-08-25T19:18:27Z",
-      "latest": true,
+      "latest": false,
       "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/manifest.json",
       "assets": [
         {
