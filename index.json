@@ -39,37 +39,6 @@
           "status": "no entry in source/firmware_profiles.json for sha256 286b7139019e7700..."
         },
         {
-          "name": "frm19_t2.gbl",
-          "size": 194308,
-          "sha256": "54b261403e2c7f1da9dcd7dbd958f7417b22a27c998acdcf6dd8c55c195a1ca5",
-          "kind": "image",
-          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.24/frm19_t2.gbl",
-          "container": "gbl",
-          "transport": "ota",
-          "slot": "application",
-          "embedded_version": "1.0.19",
-          "version_verdict": "VERIFIED",
-          "spans": [
-            "0x4000-0x336B8"
-          ],
-          "programs_from": "0x4000",
-          "device_name_marker": true,
-          "gbl_crc32": "0x714C3940",
-          "gbl_tags": [
-            "HEADER_V3",
-            "APPLICATION",
-            "ERASEPROG",
-            "END"
-          ],
-          "status": "field-proven, most widely deployed",
-          "scale_model": 2,
-          "indicator": "Morrison-style CR/LF stream",
-          "serial": "9600-8-N-1",
-          "stream": "CR LF framing, 8-byte frame, weight = 6 ASCII digits",
-          "caution": null,
-          "profile_source": "stated in firmware_profiles.json"
-        },
-        {
           "name": "frm20_t1.gbl",
           "size": 196588,
           "sha256": "f5f89ceba3d9b41cfd85a45a4d8858f7d38beec0b8e76114b09abdc54c463120",
