@@ -4,9 +4,89 @@
   "note": "One-way, CI-generated mirror of the PipeAg scale-sensor firmware releases. Every version and address range listed here was read out of the image bytes, never from a filename. scale_model is a stated fact from the release process - null means nobody stated it, which is not the same as a default.",
   "releases": [
     {
+      "tag": "v2.0.02",
+      "published_at": "2026-09-15T17:40:58Z",
+      "latest": true,
+      "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.02/manifest.json",
+      "assets": [
+        {
+          "name": "bootloader-second-stage.s37",
+          "size": 26519,
+          "sha256": "82fff70b03a8a7a10d15b4ab7fa387709c8061438a2da8db59cf0b6deedfccca",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.02/bootloader-second-stage.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "bootloader",
+          "embedded_version": null,
+          "version_verdict": "UNVERIFIED",
+          "spans": [
+            "0x0000-0x2664"
+          ],
+          "programs_from": "0x0000",
+          "device_name_marker": false,
+          "srec_start_address": "0x0139",
+          "status": "Gecko Bootloader with internal storage; flash before the application on a blank module. Carries no application revision string - identify it by sha256.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "cmb02_lidar.gbl",
+          "size": 194752,
+          "sha256": "383ae8666dbb6ce45c55e85d91591aadfb12ce8881f15f726210f10bebc3fa7e",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.02/cmb02_lidar.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "2.0.02",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33874"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": false,
+          "gbl_crc32": "0xF4E6352B",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "Combine LiDAR application, 115200-8-N-1, RX=PB01 and TX=PB00. No scale indicator profile applies. Software checks passed; physical board and scale-to-combine-to-scale OTA acceptance remain pending. See RELEASE_NOTES_v2.0.02.md.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "cmb02_lidar.s37",
+          "size": 559764,
+          "sha256": "ee91e7ad6763cfd4b8e18f0edd6c9847ff8835916c5b287743ee392f83ff247e",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.02/cmb02_lidar.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "application",
+          "embedded_version": "2.0.02",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x33874"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": false,
+          "srec_start_address": "0x516D",
+          "status": "Combine LiDAR application, 115200-8-N-1, RX=PB01 and TX=PB00. No scale indicator profile applies. Application-only SWD image; a blank module also requires bootloader-second-stage.s37. Software checks passed; physical board and scale-to-combine-to-scale OTA acceptance remain pending. See RELEASE_NOTES_v2.0.02.md.",
+          "scale_model": null,
+          "profile_source": null
+        }
+      ]
+    },
+    {
       "tag": "v1.0.26",
       "published_at": "2026-08-26T20:23:56Z",
-      "latest": true,
+      "latest": false,
       "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v1.0.26/manifest.json",
       "assets": [
         {
