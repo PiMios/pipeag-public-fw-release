@@ -4,9 +4,89 @@
   "note": "One-way, CI-generated mirror of the PipeAg scale-sensor firmware releases. Every version and address range listed here was read out of the image bytes, never from a filename. scale_model is a stated fact from the release process - null means nobody stated it, which is not the same as a default.",
   "releases": [
     {
+      "tag": "v2.0.03",
+      "published_at": "2026-09-15T18:34:41Z",
+      "latest": true,
+      "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.03/manifest.json",
+      "assets": [
+        {
+          "name": "bootloader-second-stage.s37",
+          "size": 26519,
+          "sha256": "82fff70b03a8a7a10d15b4ab7fa387709c8061438a2da8db59cf0b6deedfccca",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.03/bootloader-second-stage.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "bootloader",
+          "embedded_version": null,
+          "version_verdict": "UNVERIFIED",
+          "spans": [
+            "0x0000-0x2664"
+          ],
+          "programs_from": "0x0000",
+          "device_name_marker": false,
+          "srec_start_address": "0x0139",
+          "status": "Gecko Bootloader with internal storage; flash before the application on a blank module. Carries no application revision string - identify it by sha256.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "cmb03_lidar.gbl",
+          "size": 194880,
+          "sha256": "9cc4eeb5440ef31a6e3b5348ea032ac29fd4b14e67fc237e1e0bbe803bd4476d",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.03/cmb03_lidar.gbl",
+          "container": "gbl",
+          "transport": "ota",
+          "slot": "application",
+          "embedded_version": "2.0.03",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x338F4"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": false,
+          "gbl_crc32": "0x598F44F8",
+          "gbl_tags": [
+            "HEADER_V3",
+            "APPLICATION",
+            "ERASEPROG",
+            "ERASEPROG",
+            "END"
+          ],
+          "status": "Combine LiDAR application, 115200-8-N-1, RX=PB01 and TX=PB00. Corrected RGB routing, continuous UART enables and timed stale-data status. Software and CI checks passed; physical LED and v2.0.03 OTA acceptance remain pending. See RELEASE_NOTES_v2.0.03.md.",
+          "scale_model": null,
+          "profile_source": null
+        },
+        {
+          "name": "cmb03_lidar.s37",
+          "size": 560132,
+          "sha256": "6a8e2663bd4f4f99cdf12a419f8cbde884eeb291d21b0f2fd0bb040747d7c01c",
+          "kind": "image",
+          "download_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.03/cmb03_lidar.s37",
+          "container": "s37",
+          "transport": "swd",
+          "slot": "application",
+          "embedded_version": "2.0.03",
+          "version_verdict": "VERIFIED",
+          "spans": [
+            "0x4000-0x4134",
+            "0x4140-0x338F4"
+          ],
+          "programs_from": "0x4000",
+          "device_name_marker": false,
+          "srec_start_address": "0x516D",
+          "status": "Same combine v2.0.03 application as cmb03_lidar.gbl. Application-only SWD image; a blank module also requires bootloader-second-stage.s37. Software and CI checks passed; physical LED and v2.0.03 OTA acceptance remain pending. See RELEASE_NOTES_v2.0.03.md.",
+          "scale_model": null,
+          "profile_source": null
+        }
+      ]
+    },
+    {
       "tag": "v2.0.02",
       "published_at": "2026-09-15T17:40:58Z",
-      "latest": true,
+      "latest": false,
       "manifest_url": "https://github.com/PiMios/pipeag-public-fw-release/releases/download/v2.0.02/manifest.json",
       "assets": [
         {
